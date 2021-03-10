@@ -52,7 +52,6 @@ function update() {
                 break;
         }
     });
-    console.log(currentActive);
     if (currentActive == 1) {
         prev.disabled = true;
     } else if (currentActive === steps.length) {
@@ -62,4 +61,3 @@ function update() {
         prev.disabled = false;
     }
 }
-console.log(currentActive);
