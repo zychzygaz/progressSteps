@@ -1,0 +1,93 @@
+:root {
+    --fillCircle: rgb(36, 47, 109);
+    --bar: #929292;
+}
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    /* width: 100vw; */
+}
+
+.top {
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    width: 400px;
+    margin-bottom: 30px;
+}
+
+.bar {
+    position: absolute;
+    background-color: rgb(36, 47, 109);
+    top: 40%;
+    border-radius: 6px;
+    z-index: -1;
+    height: 4px;
+    transform: translateY(50%);
+    transition: 0.5s ease-out;
+}
+.bar:hover {
+    width: 100%;
+}
+
+.top::after {
+    content: "";
+    position: absolute;
+    background-color: var(--bar);
+    width: 100%;
+    top: 40%;
+    border-radius: 6px;
+    z-index: -2;
+    height: 4px;
+    transform: translateY(50%);
+}
+
+.circle {
+    background-color: #f3f3f3;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 3px solid #929292;
+    transition: 0.4s ease;
+}
+
+.circle.active {
+    background-color: rgb(36, 47, 109);
+    color: white;
+}
+
+button {
+    padding: 10px 20px;
+    border: 0;
+    border-radius: 5px;
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+button:focus {
+    outline: 0;
+}
+
+button:disabled {
+    background-color: var(--bar);
+}
+
+.hhh {
+    background-color: red;
+    color: violet;
+}
